@@ -53,42 +53,42 @@ public class MainActivity extends AppCompatActivity {
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        selectDrawerItem(menuItem);
+//                        selectDrawerItem(menuItem);
                         return true;
                     }
                 }
         );
     }
 
-    public void selectDrawerItem(MenuItem menuItem) {
-        Fragment fragment = null;
-
-        Class fragmentClass;
-        switch (menuItem.getItemId()) {
-            case R.id.nav_first_fragment:
-                fragmentClass = FirstFragment.class;
-                break;
-            case R.id.nav_second_fragment:
-                fragmentClass = SecondFragment.class;
-                break;
-            case R.id.nav_third_fragment:
-                fragmentClass = ThirdFragment.class;
-                break;
-            default:
-                fragmentClass = FirstFragment.class;
-        }
-
-        try {
-            fragment = (Fragment) fragmentClass.newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
-
-        menuItem.setChecked(true);
-        setTitle(menuItem.getTitle());
-        mDrawer.closeDrawers();
-    }
+//    public void selectDrawerItem(MenuItem menuItem) {
+//        Fragment fragment = null;
+//
+//        Class fragmentClass;
+//        switch (menuItem.getItemId()) {
+//            case R.id.nav_first_fragment:
+//                fragmentClass = FirstFragment.class;
+//                break;
+//            case R.id.nav_second_fragment:
+//                fragmentClass = SecondFragment.class;
+//                break;
+//            case R.id.nav_third_fragment:
+//                fragmentClass = ThirdFragment.class;
+//                break;
+//            default:
+//                fragmentClass = FirstFragment.class;
+//        }
+//
+//        try {
+//            fragment = (Fragment) fragmentClass.newInstance();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+//
+//        menuItem.setChecked(true);
+//        setTitle(menuItem.getTitle());
+//        mDrawer.closeDrawers();
+//    }
 }

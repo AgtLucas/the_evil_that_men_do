@@ -1,5 +1,6 @@
 package ninja.lucas.theevilthatmendo;
 
+import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
@@ -55,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
         nvDrawer = (NavigationView) findViewById(R.id.nvView);
 
         setupDrawerContent(nvDrawer);
+
+//        drawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
